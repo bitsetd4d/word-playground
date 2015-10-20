@@ -1,0 +1,35 @@
+DictionaryToMap (JWNL Dictionary Serialization Utility)
+Requires JNWNL Version 1.1 or greater
+
+DictionaryToMap allows you to create and serialize Maps containing the entire WordNet dictionary. 
+These maps are compatible with MapBackedDictionary.
+
+Cost/Benefit Tradeoff
+
+Having in-memory databases takes a lot of memory. To have the wordnet dictionary in memory as hashtables, 
+you will be required to have about 42MB of available in your memory allocation pool JUST FOR THE DICTIONARY. 
+This does not include memory required by the rest of your program. You can specify the memory requirements
+ of your VM with the -Xmx (maximum memory) and -Xms (startup memory) options (these are available for the
+  hotspot VM, but I don't know about any other VMs). For example, to start your VM with an 80MB allocation pool, call
+
+"java -Xmx80m -Xms80m <other options> <class> <program options>"
+
+The benefit of having an in-memory dictionary is obviously that it's a lot faster. With a flatfile dictionary,
+you have to seek to the offset in a file and then read the data and parse it. Reading from an index or exception 
+file is much worse because you don't know the index so you have to binary search for the desired word. With an 
+in-memory dictionary, all index words/synsets are allready parsed, so any lookup operation has an order of 1. 
+If you have the memory available, this speed advantage is definitely worth the memory costs.
+
+Usage
+
+Make sure you have your property file set up correctly, and then just call:
+
+java -cp jwnl.jar;utilities.jar net.didion.jwnl.utilities.DictionaryToMap <destination directory> <properties file>
+
+Where <destination directory> is the directory in which to create the serialized dictionary files (note that this
+cannot be the same directory that contains the regular dictionary files), and <properties file> 
+is the path of the properties file to use.
+
+Once you have created the serialized dictionary files,  create a properties file that specifies MapBackedDictioanry
+as the dictionary to use, and the directory in which you created the files as the dictionary path. Then use this 
+properties file to initialize JWNL.

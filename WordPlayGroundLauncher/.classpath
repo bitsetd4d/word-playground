@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/WordPlayGround"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/WordPlaygroundSpeakingTool"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GameUtil"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GameWidgets"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/WordPlayWords"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

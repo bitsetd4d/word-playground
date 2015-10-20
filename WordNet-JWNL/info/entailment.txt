@@ -1,0 +1,22 @@
+JWNL Reverse Entailment Package
+Requires JWNL Version 1.1 or greater
+
+The reverse entailment, or entailed by, relationship is simply the opposite of the entailment relationship. For example, if "to limp" 
+entails "to walk" then "to walk" is entailed by "to limp". Having this relationship available is necessary for certain forms of term 
+expansion when doing natural language processing. You don't have to know what this means, only know that if you are using my JNLI 
+package, you must install this package.
+
+Usage
+
+java -cp jwnl.jar;utilities.jar net.didion.jwnl.utilities.AddReverseEntailment <properties file> <new verb index filename> <new verb data filename>
+
+Properties file is the path of the properties file to use. New verb index/data filenames are the names of the files to create for the
+index/data that contain reverse entailment pointers.
+
+After running this program, back up your existing copies of the verb index and data files in the word net dictionary directory. 
+Then rename the newly created index/data files appropriately and place them in the word net dictionary directory.
+
+Please Note: Installing these files over the top of your existing verb data/index files will cause the wordnet browser that comes
+with the wordnet distribution to stop working because it does not recognize reverse entailment relationships. If you want to be able
+to use this browser, I recommend creating a seperate directory for the new verb data and verb index files and putting a copy of all
+the other dictionary files into that directory.

@@ -1,0 +1,659 @@
+d3bug.audio.AudioClipAccess -> G:
+    d3bug.audio.AudioClipAccess INSTANCE -> a
+    java.util.Map clips -> a
+    java.lang.String MEDIA_LOCATION -> a
+    d3bug.audio.AudioClipAccess getInstance() -> a
+    java.applet.AudioClip getAudioClip(java.lang.String) -> a
+    java.net.URL getSoundUrl(java.lang.String) -> a
+d3bug.graphics.ImageAccess -> a:
+    d3bug.graphics.ImageAccess INSTANCE -> a
+    java.util.Map icons -> a
+    java.lang.String MEDIA_LOCATION -> a
+    d3bug.graphics.ImageAccess getInstance() -> a
+    javax.swing.ImageIcon getIcon(java.lang.String) -> a
+    javax.swing.ImageIcon createIcon(java.lang.String) -> b
+    java.net.URL getImageUrl(java.lang.String) -> a
+d3bug.kidswing.FontManager -> C:
+    d3bug.kidswing.FontManager INSTANCE -> a
+    java.lang.String FONT_FACE -> a
+    java.util.Map fontsInUse -> a
+    d3bug.kidswing.FontManager getInstance() -> a
+    java.awt.Font getComicFont(int) -> a
+d3bug.os.ThisComputer -> ai:
+    boolean isOSX() -> a
+d3bug.poc.Edge -> L:
+    d3bug.poc.Edge LEFT -> a
+    d3bug.poc.Edge RIGHT -> b
+    d3bug.poc.Edge TOP -> c
+    d3bug.poc.Edge BOTTOM -> d
+    d3bug.poc.Edge[] $VALUES -> a
+    d3bug.poc.Edge[] values() -> values
+    d3bug.poc.Edge valueOf(java.lang.String) -> valueOf
+d3bug.poc.GestureTracking -> J:
+    int lastX -> a
+    int lastY -> b
+    long lastChangeOfDirection -> a
+    int xchangedCount -> c
+    int ychangedCount -> d
+    boolean movedLeft -> b
+    boolean movedUp -> c
+    boolean shakeLeftRight -> a
+    void seeMouse(int,int) -> a
+d3bug.poc.MotionWaiter -> ac:
+    java.util.concurrent.locks.Lock lock -> a
+    java.util.concurrent.locks.Condition finished -> a
+    int count -> a
+    void onStationary$461b8d38() -> a
+    void await() -> b
+d3bug.poc.ResizingBackground -> ak:
+    javax.swing.JLabel imageLabel -> a
+    javax.swing.ImageIcon backgroundIcon -> a
+    javax.swing.JLayeredPane layeredPane -> a
+    double imageRatio -> a
+    void setupBackground() -> a
+    void fitImageToWindow() -> b
+    java.awt.Image newImagePreserveRatio(java.awt.Image,int,int) -> a
+    void access$000(d3bug.poc.ResizingBackground) -> a
+d3bug.poc.ResizingBackground$1 -> ab:
+    d3bug.poc.ResizingBackground this$0 -> a
+    void componentHidden(java.awt.event.ComponentEvent) -> componentHidden
+    void componentMoved(java.awt.event.ComponentEvent) -> componentMoved
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+    void componentShown(java.awt.event.ComponentEvent) -> componentShown
+d3bug.poc.SpriteButtonButton -> av:
+    d3bug.poc.SpriteButtonUniverse universe -> a
+    d3bug.poc.SpriteButtonUniverse$ButtonMouseMotionListener listener$77a15598 -> a
+    long lastClicked -> a
+    long created -> b
+    boolean inMotion -> a
+    javax.swing.JButton jbutton -> a
+    boolean destroyed -> b
+    java.util.List callbacks -> a
+    void setListener$78545a8d(d3bug.poc.SpriteButtonUniverse$ButtonMouseMotionListener) -> a
+    void unregisterListener() -> e
+    void clicked() -> f
+    long getLastClicked() -> a
+    long getCreated() -> b
+    void touched() -> g
+    boolean inMotion() -> a
+    void setInMotion(boolean) -> a
+    void addCallback$2f4eb90f(d3bug.poc.MotionWaiter) -> a
+    void mergeOnRightAndBecome$461b8d38(d3bug.poc.SpriteButtonButton) -> f
+    void mergeOnLeftAndBecome$461b8d38(d3bug.poc.SpriteButtonButton) -> g
+    void flyTo(int,int,int) -> a
+    void expand(java.util.List) -> a
+    void explode(java.util.List) -> b
+    void destroySprite() -> h
+    void unDestroySprite() -> i
+    void setDestroyed(boolean) -> b
+    java.lang.String toString() -> toString
+    java.awt.Component getComponent() -> a
+    java.awt.Rectangle getBounds() -> a
+    int getHeight() -> a
+    java.lang.String getText() -> a
+    int getWidth() -> b
+    int getX() -> c
+    int getY() -> d
+    boolean isVisible() -> b
+    void setFont(java.awt.Font) -> a
+    void setForeground(java.awt.Color) -> a
+    void setLocation(int,int) -> a
+    void setSize(int,int) -> b
+    void setText(java.lang.String) -> e
+    void setVisible(boolean) -> c
+    void setIcon(javax.swing.Icon) -> a
+    d3bug.poc.SpriteButtonButton$ButtonMemento getMemento$7530cc9e() -> a
+    void setFromMemento$a75c498(d3bug.poc.SpriteButtonButton$ButtonMemento) -> a
+d3bug.poc.SpriteButtonButton$1 -> K:
+d3bug.poc.SpriteButtonButton$ButtonMemento -> af:
+    java.awt.Rectangle bounds -> a
+    java.lang.String text -> a
+    boolean visible -> a
+    boolean destroyed -> b
+    java.awt.Rectangle access$102(d3bug.poc.SpriteButtonButton$ButtonMemento,java.awt.Rectangle) -> a
+    java.lang.String access$202(d3bug.poc.SpriteButtonButton$ButtonMemento,java.lang.String) -> a
+    boolean access$302(d3bug.poc.SpriteButtonButton$ButtonMemento,boolean) -> a
+    boolean access$402(d3bug.poc.SpriteButtonButton$ButtonMemento,boolean) -> b
+    java.awt.Rectangle access$100(d3bug.poc.SpriteButtonButton$ButtonMemento) -> a
+    java.lang.String access$200(d3bug.poc.SpriteButtonButton$ButtonMemento) -> a
+    boolean access$300(d3bug.poc.SpriteButtonButton$ButtonMemento) -> a
+    boolean access$400(d3bug.poc.SpriteButtonButton$ButtonMemento) -> b
+d3bug.poc.SpriteButtonUniverse -> e:
+    javax.swing.JLayeredPane layeredPane -> a
+    java.awt.Font FONT -> a
+    java.util.Random random -> a
+    int COLLISION_INTERVAL -> a
+    int DOUBLE_CLICK_INTERVAL -> b
+    int clickedX -> c
+    int clickedY -> d
+    java.util.List toolButtons -> a
+    java.util.List buttons -> b
+    java.util.List allButtons -> c
+    java.util.List listeners -> d
+    d3bug.poc.threads.UniverseRunner runner -> a
+    d3bug.poc.SpriteButtonButton createButton$7a4d0146(java.lang.String) -> a
+    void destroyButton$461b8d38(d3bug.poc.SpriteButtonButton) -> a
+    void undestroyButton$461b8d38(d3bug.poc.SpriteButtonButton) -> b
+    void registerToolButton(d3bug.poc.tools.ToolButton) -> a
+    void addListener$465a3d4a(d3bug.poc.tools.ToolButton) -> b
+    void addKeyboardListener() -> b
+    void moveButtonsToLineUp() -> a
+    void scheduleUncollideTask() -> c
+    void flyToFocusPosition$461b8d38(d3bug.poc.SpriteButtonButton) -> c
+    void execute(d3bug.poc.threads.UniverseRunnable) -> a
+    void executeNow(d3bug.poc.threads.UniverseRunnable) -> b
+    java.util.List getAllSpriteButtons() -> a
+    java.awt.Rectangle getVisibleArea() -> a
+    d3bug.poc.SpriteButtonButton getButtonAt$176d8a9c(int,int) -> a
+    void notifyWordCreated(java.lang.String) -> a
+    java.util.List access$000(d3bug.poc.SpriteButtonUniverse) -> a
+    int access$100() -> a
+    int access$202(d3bug.poc.SpriteButtonUniverse,int) -> a
+    int access$302(d3bug.poc.SpriteButtonUniverse,int) -> b
+    int access$200(d3bug.poc.SpriteButtonUniverse) -> a
+    int access$300(d3bug.poc.SpriteButtonUniverse) -> b
+    java.util.List access$400(d3bug.poc.SpriteButtonUniverse) -> b
+    java.util.Random access$500() -> a
+    javax.swing.JLayeredPane access$600(d3bug.poc.SpriteButtonUniverse) -> a
+d3bug.poc.SpriteButtonUniverse$1 -> p:
+    d3bug.poc.SpriteButtonUniverse this$0 -> a
+    boolean dispatchKeyEvent(java.awt.event.KeyEvent) -> dispatchKeyEvent
+d3bug.poc.SpriteButtonUniverse$2 -> ah:
+    d3bug.poc.SpriteButtonUniverse this$0 -> a
+    void run() -> run
+d3bug.poc.SpriteButtonUniverse$ButtonMouseMotionListener -> F:
+    d3bug.poc.SpriteButtonButton myButton$3d167e83 -> a
+    d3bug.poc.GestureTracking dragGestureTracking -> a
+    d3bug.poc.GestureTracking moveGestureTracking -> b
+    d3bug.poc.SpriteButtonUniverse this$0 -> a
+    boolean doubleClickCheck() -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mouseEntered(java.awt.event.MouseEvent) -> mouseEntered
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+    void mouseDragged(java.awt.event.MouseEvent) -> mouseDragged
+    double calcOverlapPercentage$3b4dfe5d() -> a
+    int calculateSmallest(int,int,int,int) -> a
+    void mouseMoved(java.awt.event.MouseEvent) -> mouseMoved
+d3bug.poc.SpriteMouseListener -> aj:
+d3bug.poc.actions.CreateNewLetterAction -> T:
+    d3bug.poc.SpriteButtonUniverse universe -> a
+    java.lang.String text -> a
+    d3bug.poc.SpriteButtonButton b$3d167e83 -> a
+    void run() -> a
+    void undo() -> b
+d3bug.poc.actions.ExpandButtonAction -> s:
+    d3bug.poc.SpriteButtonUniverse universe -> a
+    d3bug.poc.SpriteButtonButton button$3d167e83 -> a
+    d3bug.poc.SpriteButtonButton$ButtonMemento buttonMemento$79fd8203 -> a
+    java.util.List newButtons -> a
+    void run() -> a
+    void undo() -> b
+d3bug.poc.actions.ExplodeButtonAction -> U:
+    d3bug.poc.SpriteButtonUniverse universe -> a
+    d3bug.poc.SpriteButtonButton button$3d167e83 -> a
+    d3bug.poc.SpriteButtonButton$ButtonMemento buttonMemento$79fd8203 -> a
+    java.util.List newButtons -> a
+    void run() -> a
+    void undo() -> b
+d3bug.poc.actions.MergeButtonsTogetherAction -> z:
+    boolean touchedTargetOnLeft -> a
+    d3bug.poc.SpriteButtonButton sourceButton$3d167e83 -> a
+    d3bug.poc.SpriteButtonButton targetButton$3d167e83 -> b
+    d3bug.poc.SpriteButtonUniverse universe -> a
+    d3bug.poc.SpriteButtonButton$ButtonMemento sourceMemento$79fd8203 -> a
+    d3bug.poc.SpriteButtonButton$ButtonMemento targetMemento$79fd8203 -> b
+    void run() -> a
+    void undo() -> b
+d3bug.poc.actions.MoveButtonsToLineupAction -> E:
+    java.util.List allButtons -> a
+    java.util.List toolButtons -> b
+    java.awt.Component parent -> a
+    java.util.Map mementos -> a
+    void run() -> a
+    void undo() -> b
+    void saveState() -> d
+d3bug.poc.actions.VacuumEatButtonsAction -> m:
+    d3bug.poc.tools.ToolButton toolButton -> a
+    java.util.List buttons -> a
+    d3bug.poc.SpriteButtonButton$ButtonMemento toolMemento$79fd8203 -> a
+    java.util.Map mementos -> a
+    void run() -> a
+    void undo() -> b
+    void saveState() -> d
+d3bug.poc.launch.LicenseCheck -> Y:
+    void hackyQuickCheck() -> a
+d3bug.poc.launch.SpriteButtonWindow -> d3bug.poc.launch.SpriteButtonWindow:
+    javax.swing.JLayeredPane layeredPane -> a
+    d3bug.poc.SpriteButtonUniverse universe -> a
+    javax.swing.ImageIcon backgroundIcon -> a
+    boolean DEBUG -> a
+    void main(java.lang.String[]) -> main
+    void open() -> a
+    javax.swing.ImageIcon getBackgroundImage() -> a
+    void addControlButtons() -> b
+    void addStuff() -> c
+    d3bug.poc.SpriteButtonUniverse access$000(d3bug.poc.launch.SpriteButtonWindow) -> a
+d3bug.poc.launch.SpriteButtonWindow$1 -> H:
+    d3bug.poc.launch.SpriteButtonWindow this$0 -> a
+    void run() -> run
+d3bug.poc.launch.SpriteButtonWindow$2 -> t:
+    d3bug.poc.launch.SpriteButtonWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+d3bug.poc.launch.SpriteButtonWindow$3 -> R:
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+d3bug.poc.launch.SpriteButtonWindow$4 -> Z:
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+d3bug.poc.log.Logger -> g:
+    java.util.List listeners -> a
+    void info(java.lang.Object,java.lang.String) -> a
+    void addLogListener$11983054(d3bug.poc.tools.LogLookTool) -> a
+    void removeLogListener$11983054(d3bug.poc.tools.LogLookTool) -> b
+d3bug.poc.sounds.SoundFx -> au:
+    java.util.Random random -> a
+    d3bug.poc.sounds.SoundFx INSTANCE -> a
+    java.util.concurrent.ExecutorService soundExecutor -> a
+    java.lang.String[] MERGE_SOUNDS -> a
+    d3bug.poc.sounds.SoundFx getInstance() -> a
+    void soundStartup() -> a
+    void soundWordPickedUp() -> b
+    void soundCorrect() -> c
+    void soundVacuumAttack() -> d
+    void soundClick() -> e
+    void soundDoubleClick() -> f
+    void soundNewLetterButtonCreated() -> g
+    void soundEatButton() -> h
+    void soundMerge() -> i
+    void soundUndo() -> j
+    void soundRedo() -> k
+    void soundDontKnown() -> l
+    void playPhonic(java.lang.String) -> a
+    void playPhoneme(java.lang.String) -> b
+    void playSoundFile(java.lang.String) -> c
+d3bug.poc.sounds.SoundFx$1 -> ax:
+    java.lang.String val$fileName -> a
+    void run() -> run
+d3bug.poc.tasks.CompositeTask -> P:
+    java.util.List tasks -> a
+    void add(d3bug.poc.threads.UniverseRunnable) -> a
+    java.lang.String getName() -> a
+    void setUniverseBusy(boolean) -> a
+    void run() -> a
+    void quickRun() -> b
+d3bug.poc.tasks.ExpandButtonTask -> d:
+    d3bug.poc.SpriteButtonButton button$3d167e83 -> a
+    java.util.List newButtons -> a
+    java.util.Random random -> a
+    java.lang.String getName() -> a
+    void run() -> a
+d3bug.poc.tasks.ExplodeButtonTask -> B:
+    d3bug.poc.SpriteButtonButton button$3d167e83 -> a
+    java.util.List newButtons -> a
+    java.util.Random random -> a
+    java.lang.String getName() -> a
+    void run() -> a
+d3bug.poc.tasks.FlyButtonToLocationTask -> as:
+    d3bug.poc.SpriteButtonButton button -> a
+    int x -> a
+    int y -> b
+    int steps -> c
+    int sleep -> d
+    int basex -> e
+    int basey -> f
+    java.lang.String getName() -> a
+    void run() -> a
+d3bug.poc.tasks.FlyToFocusPositionTask -> al:
+    java.awt.Component parent -> a
+    d3bug.poc.SpriteButtonButton target$3d167e83 -> a
+    java.util.List allButtons -> a
+    int basex -> a
+    int basey -> b
+    double dx -> a
+    double dy -> b
+    java.util.Map inFlightTargets -> a
+    java.lang.String getName() -> a
+    void run() -> a
+    void quickRun() -> b
+    void setup() -> c
+d3bug.poc.tasks.HighlightSpritesTask -> O:
+    java.util.List buttons -> a
+    int duration -> a
+    java.awt.Color colour -> a
+    java.lang.String getName() -> a
+    void run() -> a
+    java.util.List access$000(d3bug.poc.tasks.HighlightSpritesTask) -> a
+d3bug.poc.tasks.HighlightSpritesTask$1 -> S:
+    d3bug.poc.tasks.HighlightSpritesTask this$0 -> a
+    void run() -> run
+d3bug.poc.tasks.MakeWordFromLettersTask -> o:
+    java.util.List potentialWord -> a
+    java.util.Random random -> a
+    java.lang.String getName() -> a
+    void run() -> a
+    void mergeButtons$708755d7(d3bug.poc.SpriteButtonButton,java.util.List) -> a
+    void flyTogetherNow(java.util.List) -> a
+    void shakeButtonsNow$6c32d3bd(int,int,int,int,d3bug.poc.SpriteButtonButton[]) -> a
+    void sortPotentialWordByX() -> c
+    java.lang.String getWord(java.util.List) -> a
+    java.lang.String getWordBits(java.util.List) -> b
+d3bug.poc.tasks.MakeWordFromLettersTask$1 -> j:
+    int compare$7881da12(d3bug.poc.SpriteButtonButton,d3bug.poc.SpriteButtonButton) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+d3bug.poc.tasks.MergeOnLeftAndBecomeTask -> f:
+    d3bug.poc.SpriteButtonUniverse universe -> a
+    d3bug.poc.SpriteButtonButton source$3d167e83 -> a
+    d3bug.poc.SpriteButtonButton target$3d167e83 -> b
+    java.lang.String getName() -> a
+    void run() -> a
+d3bug.poc.tasks.MergeOnRightAndBecomeTask -> W:
+    d3bug.poc.SpriteButtonUniverse universe -> a
+    d3bug.poc.SpriteButtonButton source$3d167e83 -> a
+    d3bug.poc.SpriteButtonButton target$3d167e83 -> b
+    java.lang.String getName() -> a
+    void run() -> a
+d3bug.poc.tasks.MoveButtonsToLineupTask -> k:
+    java.util.List allButtons -> a
+    java.util.List toolButtons -> b
+    java.awt.Component parent -> a
+    int[] basex -> a
+    int[] basey -> b
+    double[] dx -> a
+    double[] dy -> b
+    java.lang.String getName() -> a
+    void run() -> a
+    void quickRun() -> b
+    void setup() -> c
+d3bug.poc.tasks.MoveButtonsTowardsButtonTask -> y:
+    d3bug.poc.SpriteButtonButton target$3d167e83 -> a
+    java.util.List followers -> a
+    int speed -> a
+    double speedDecay -> a
+    int interval -> b
+    int maxrun -> c
+    boolean done -> b
+    java.lang.String getName() -> a
+    void done() -> c
+    void run() -> a
+d3bug.poc.tasks.ShakeButtonsTask -> am:
+    java.util.List buttons -> a
+    java.util.Random random -> a
+    java.lang.String getName() -> a
+    void run() -> a
+    void quickRun() -> b
+    void shakeButtonsNow(int,int,int,int) -> a
+d3bug.poc.tasks.ShowLogo -> M:
+    javax.swing.JLayeredPane layeredPane -> a
+    java.lang.String[] TEXT -> a
+    javax.swing.JLabel[] text -> a
+    java.awt.Font FONT -> a
+    java.lang.String getName() -> a
+    void run() -> a
+d3bug.poc.tasks.ToolAttacksButtonsTask -> ao:
+    d3bug.poc.tools.ToolButton toolButton -> a
+    java.util.List buttons -> a
+    boolean first -> b
+    java.lang.String getName() -> a
+    void run() -> a
+    void sleepSome() -> c
+    void attackButton$461b8d38(d3bug.poc.SpriteButtonButton) -> a
+    d3bug.poc.SpriteButtonButton findClosestButton$4d382f7c() -> a
+    int computeDistance$461b8d2b(d3bug.poc.SpriteButtonButton) -> a
+d3bug.poc.threads.UniverseRunnable -> N:
+    boolean universeBusy -> a
+    void setUniverseBusy(boolean) -> a
+    boolean isOptional() -> a
+    void run() -> a
+    void quickRun() -> b
+    void sleep(int) -> a
+    java.lang.String getName() -> a
+    void log(java.lang.String) -> a
+d3bug.poc.threads.UniverseRunner -> h:
+    d3bug.poc.threads.UniverseRunner INSTANCE -> a
+    java.util.concurrent.BlockingQueue workQueue -> a
+    java.util.concurrent.ThreadPoolExecutor pool -> a
+    java.util.concurrent.atomic.AtomicInteger jobCount -> a
+    java.util.Timer timer -> a
+    java.util.List listeners -> a
+    d3bug.poc.threads.UniverseRunnable currentRunnable -> a
+    d3bug.poc.threads.UniverseRunner getRunner() -> a
+    void addListener$5bbd3fe7(d3bug.poc.tools.ThreadControlToolButton) -> a
+    void executeNow(d3bug.poc.threads.UniverseRunnable) -> a
+    void execute(d3bug.poc.threads.UniverseRunnable) -> b
+    boolean isUniverseBusy() -> a
+    void sheduleWhenNotBusy(java.util.TimerTask,int,int) -> a
+    void sheduleOnetime(java.util.TimerTask,int) -> a
+    java.util.List access$000(d3bug.poc.threads.UniverseRunner) -> a
+    d3bug.poc.threads.UniverseRunnable access$102(d3bug.poc.threads.UniverseRunner,d3bug.poc.threads.UniverseRunnable) -> a
+    boolean access$200(d3bug.poc.threads.UniverseRunner) -> a
+    java.util.concurrent.atomic.AtomicInteger access$300(d3bug.poc.threads.UniverseRunner) -> a
+d3bug.poc.threads.UniverseRunner$1 -> A:
+    java.lang.String val$name -> a
+    d3bug.poc.threads.UniverseRunnable val$ur -> a
+    d3bug.poc.threads.UniverseRunner this$0 -> a
+    void run() -> run
+d3bug.poc.threads.UniverseRunner$2 -> w:
+    java.util.TimerTask val$t -> a
+    d3bug.poc.threads.UniverseRunner this$0 -> a
+    void run() -> run
+d3bug.poc.threads.UniverseRunner$3 -> i:
+    java.util.TimerTask val$t -> a
+    void run() -> run
+d3bug.poc.threads.UserAction -> q:
+    void run() -> a
+    void undo() -> b
+    void redo() -> c
+d3bug.poc.threads.UserActionQueue -> D:
+    d3bug.poc.threads.UserActionQueue INSTANCE -> a
+    java.util.List userActions -> a
+    java.util.List redoActions -> b
+    d3bug.poc.threads.UserActionQueue getInstance() -> a
+    void run(d3bug.poc.threads.UserAction) -> a
+    void queue(d3bug.poc.threads.UserAction) -> b
+    void undo() -> a
+    void redo() -> b
+d3bug.poc.tools.GameToolButton -> b:
+    void onButtonHorizontalShaked$461b8d38(d3bug.poc.SpriteButtonButton) -> a
+    void onPressedAgainst$5aee8e05(d3bug.poc.SpriteButtonButton,d3bug.poc.SpriteButtonButton,int,d3bug.poc.Edge) -> a
+    void onDoubleClick$461b8d38(d3bug.poc.SpriteButtonButton) -> b
+d3bug.poc.tools.LetterCreatorTool -> r:
+    void onKeyPressed(java.lang.String) -> a
+d3bug.poc.tools.LogLookTool -> aa:
+    java.awt.Font FONT -> a
+    java.lang.Object focus -> a
+    javax.swing.JLayeredPane layeredPane -> a
+    javax.swing.JLabel[] console -> a
+    boolean hud -> a
+    void onToolDoubleClick() -> b
+    void createHud() -> d
+    void destroyHud() -> j
+    void console(java.lang.String) -> d
+    void onInfo(java.lang.Object,java.lang.String) -> a
+d3bug.poc.tools.ThreadControlToolButton -> u:
+    java.awt.Font FONT -> a
+    javax.swing.JLayeredPane layeredPane -> a
+    javax.swing.JLabel titleLabel -> a
+    javax.swing.JLabel[] console -> a
+    boolean hud -> a
+    void onToolDoubleClick() -> b
+    void createHud() -> d
+    void destroyHud() -> j
+    void onExecute(java.lang.String) -> d
+    void onExecuted(java.lang.String,long) -> a
+    void onQueueLength(int) -> a
+    void onScheduled(java.lang.String,int) -> a
+    void console(java.lang.String) -> f
+d3bug.poc.tools.ToolButton -> c:
+    void onToolHorizontalShake() -> a
+    void onToolDoubleClick() -> b
+    void onToolPressedAgainst$6d511798(d3bug.poc.SpriteButtonButton,int,d3bug.poc.Edge) -> a
+    void onToolReleased() -> c
+    void onButtonHorizontalShaked$461b8d38(d3bug.poc.SpriteButtonButton) -> a
+    void onSingleClick$461b8d38(d3bug.poc.SpriteButtonButton) -> c
+    void onDoubleClick$461b8d38(d3bug.poc.SpriteButtonButton) -> b
+    void onPressedAgainst$5aee8e05(d3bug.poc.SpriteButtonButton,d3bug.poc.SpriteButtonButton,int,d3bug.poc.Edge) -> a
+    void onKeyPressed(java.lang.String) -> a
+    void onCreated$461b8d38(d3bug.poc.SpriteButtonButton) -> d
+    void onDestroyed$461b8d38(d3bug.poc.SpriteButtonButton) -> e
+    void onWordCreated(java.lang.String) -> b
+    void log(java.lang.String) -> c
+d3bug.poc.tools.VacuumToolButton -> aq:
+    java.lang.Object MARKER -> a
+    java.util.WeakHashMap inProgress -> a
+    void hookKeyboard() -> d
+    void onDeletePressed() -> j
+    d3bug.poc.SpriteButtonButton getLastCreatedSingleLetterButton$4d382f7c() -> a
+    void onToolPressedAgainst$6d511798(d3bug.poc.SpriteButtonButton,int,d3bug.poc.Edge) -> a
+    void onToolHorizontalShake() -> a
+    void onToolDoubleClick() -> b
+    java.util.List getEligibleButtons() -> a
+    void onDoubleClick$461b8d38(d3bug.poc.SpriteButtonButton) -> b
+    void access$000(d3bug.poc.tools.VacuumToolButton) -> a
+    java.lang.Object access$100() -> a
+    java.util.WeakHashMap access$200(d3bug.poc.tools.VacuumToolButton) -> a
+d3bug.poc.tools.VacuumToolButton$1 -> v:
+    d3bug.poc.tools.VacuumToolButton this$0 -> a
+    boolean dispatchKeyEvent(java.awt.event.KeyEvent) -> dispatchKeyEvent
+d3bug.poc.tools.VacuumToolButton$2 -> ag:
+    d3bug.poc.SpriteButtonButton val$b$3d167e83 -> a
+    d3bug.poc.tools.ToolButton val$tool -> a
+    int val$x -> a
+    int val$y -> b
+    d3bug.poc.tools.VacuumToolButton this$0 -> a
+    void run() -> a
+    void undo() -> b
+d3bug.poc.tools.VacuumToolButton$3 -> at:
+    d3bug.poc.SpriteButtonButton val$otherButton$3d167e83 -> a
+    void run() -> a
+    void undo() -> b
+d3bug.poc.tools.VacuumToolButton$4 -> Q:
+    d3bug.poc.SpriteButtonButton val$button$3d167e83 -> a
+    java.lang.String getName() -> a
+    void run() -> a
+d3bug.poc.tools.WordMakerTool -> X:
+    d3bug.poc.threads.UniverseRunner runner -> a
+    java.util.List buttons -> a
+    java.util.List lastHighlighted -> b
+    d3bug.poc.tasks.MoveButtonsTowardsButtonTask followTask -> a
+    void onCreated$461b8d38(d3bug.poc.SpriteButtonButton) -> d
+    void onDestroyed$461b8d38(d3bug.poc.SpriteButtonButton) -> e
+    void onKeyPressed(java.lang.String) -> a
+    void onToolDoubleClick() -> b
+    void onToolReleased() -> c
+    void onToolPressedAgainst$6d511798(d3bug.poc.SpriteButtonButton,int,d3bug.poc.Edge) -> a
+    void runFollowTask() -> d
+    void stopFollowTask() -> j
+    java.util.List findSprites(boolean) -> a
+    void highlightHookedSprites(boolean) -> d
+d3bug.poc.words.WordUtil -> x:
+    java.util.List syllables -> a
+    java.util.Set strongSyllables -> a
+    void initialiseStrongSyllables() -> a
+    void initialiseSyllables() -> b
+    boolean isSyllable(java.lang.String) -> a
+    java.lang.String[] splitIntoElements(java.lang.String) -> a
+    java.util.List decomposeByStrongSyllables(java.lang.String) -> a
+    java.lang.String[] splitIntoLetters(java.lang.String) -> b
+d3bug.tool.phonetic.PhoneticSpeakDictionaryWordTask -> l:
+    d3bug.words.dictionary.internal.DictionaryReader$DictionaryWordImpl word$2dc0935e -> a
+    java.lang.String getName() -> a
+    void run() -> a
+d3bug.tool.phonetic.PhoneticToolButton -> ae:
+    boolean toolEnabled -> a
+    d3bug.util.FireIfNotInterruptedTimer fireTimer -> a
+    d3bug.words.dictionary.internal.DictionaryReader$DictionaryWordImpl wordToSay$2dc0935e -> a
+    void onWordCreated(java.lang.String) -> b
+    void setVisibleState() -> j
+    void onToolDoubleClick() -> b
+    void onSingleClick$461b8d38(d3bug.poc.SpriteButtonButton) -> c
+    void queueWordSay$184679fd(d3bug.words.dictionary.internal.DictionaryReader$DictionaryWordImpl) -> a
+    void onTimerFired() -> d
+d3bug.tool.phonetic.SpellingScoreToolButton -> an:
+    boolean disabled -> a
+    int score -> a
+    java.util.Set words -> a
+    d3bug.util.FireIfNotInterruptedTimer fireTimer -> a
+    java.lang.String wordToCheck -> a
+    void onWordCreated(java.lang.String) -> b
+    void onTimerFired() -> d
+    void checkWordSpelledCorrectly() -> j
+    void onToolHorizontalShake() -> a
+    void onToolDoubleClick() -> b
+    void showState() -> k
+d3bug.util.FireIfNotInterruptedTimer -> V:
+    java.util.Timer timer -> a
+    d3bug.util.FireIfNotInterruptedTimer$TimerFiredListener listener -> a
+    java.util.TimerTask fireTask -> a
+    void fireIfNotInterrupted(int) -> a
+    void fireCallback() -> a
+    void access$000(d3bug.util.FireIfNotInterruptedTimer) -> a
+d3bug.util.FireIfNotInterruptedTimer$1 -> n:
+    d3bug.util.FireIfNotInterruptedTimer this$0 -> a
+    void run() -> run
+d3bug.util.FireIfNotInterruptedTimer$TimerFiredListener -> ay:
+    void onTimerFired() -> d
+d3bug.util.VM -> I:
+    java.lang.Class getCaller(java.lang.Class) -> a
+d3bug.words.dictionary.DictionaryLookup -> ad:
+    java.util.Map dictionary -> a
+    d3bug.words.dictionary.internal.DictionaryReader$DictionaryWordImpl lastWord$2dc0935e -> a
+    d3bug.words.dictionary.internal.DictionaryReader$DictionaryWordImpl lookup$7eeabe47(java.lang.String) -> a
+    void initialiseDictionary() -> a
+d3bug.words.dictionary.Phoneme -> ar:
+    d3bug.words.dictionary.Phoneme AA -> a
+    d3bug.words.dictionary.Phoneme AE -> b
+    d3bug.words.dictionary.Phoneme AH -> c
+    d3bug.words.dictionary.Phoneme AO -> d
+    d3bug.words.dictionary.Phoneme AW -> e
+    d3bug.words.dictionary.Phoneme AY -> f
+    d3bug.words.dictionary.Phoneme B -> g
+    d3bug.words.dictionary.Phoneme CH -> h
+    d3bug.words.dictionary.Phoneme D -> i
+    d3bug.words.dictionary.Phoneme DH -> j
+    d3bug.words.dictionary.Phoneme EH -> k
+    d3bug.words.dictionary.Phoneme ER -> l
+    d3bug.words.dictionary.Phoneme EY -> m
+    d3bug.words.dictionary.Phoneme F -> n
+    d3bug.words.dictionary.Phoneme G -> o
+    d3bug.words.dictionary.Phoneme HH -> p
+    d3bug.words.dictionary.Phoneme IH -> q
+    d3bug.words.dictionary.Phoneme IY -> r
+    d3bug.words.dictionary.Phoneme JH -> s
+    d3bug.words.dictionary.Phoneme K -> t
+    d3bug.words.dictionary.Phoneme L -> u
+    d3bug.words.dictionary.Phoneme M -> v
+    d3bug.words.dictionary.Phoneme N -> w
+    d3bug.words.dictionary.Phoneme NG -> x
+    d3bug.words.dictionary.Phoneme OW -> y
+    d3bug.words.dictionary.Phoneme OY -> z
+    d3bug.words.dictionary.Phoneme P -> A
+    d3bug.words.dictionary.Phoneme R -> B
+    d3bug.words.dictionary.Phoneme S -> C
+    d3bug.words.dictionary.Phoneme SH -> D
+    d3bug.words.dictionary.Phoneme T -> E
+    d3bug.words.dictionary.Phoneme TH -> F
+    d3bug.words.dictionary.Phoneme UH -> G
+    d3bug.words.dictionary.Phoneme UW -> H
+    d3bug.words.dictionary.Phoneme V -> I
+    d3bug.words.dictionary.Phoneme W -> J
+    d3bug.words.dictionary.Phoneme Y -> K
+    d3bug.words.dictionary.Phoneme Z -> L
+    d3bug.words.dictionary.Phoneme ZH -> M
+    java.lang.String equivalent -> a
+    int delay -> a
+    d3bug.words.dictionary.Phoneme[] $VALUES -> a
+    d3bug.words.dictionary.Phoneme[] values() -> values
+    d3bug.words.dictionary.Phoneme valueOf(java.lang.String) -> valueOf
+d3bug.words.dictionary.internal.DictionaryReader -> ap:
+    java.io.InputStream is -> a
+    java.util.Map map -> a
+    int ok -> a
+    int errors -> b
+    void load() -> a
+    void parseLine(java.lang.String) -> a
+    d3bug.words.dictionary.Phoneme parsePhoneme(java.lang.String) -> a
+d3bug.words.dictionary.internal.DictionaryReader$DictionaryWordImpl -> aw:
+    java.lang.String word -> a
+    d3bug.words.dictionary.Phoneme[] phonemes -> a
+    java.lang.String getWord() -> a
+    d3bug.words.dictionary.Phoneme[] getPhonemes() -> a
